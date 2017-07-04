@@ -1,0 +1,70 @@
+
+grf {
+  grfid: "KI\01\01";
+  name: string(STR_GRF_NAME);
+  desc: string(STR_GRF_DESCRIPTION);
+  version: 0;
+  min_compatible_version: 0;
+}
+
+
+switch (FEAT_CARGOS, SELF, simple_profit_callback,
+  [
+    // Distance
+    STORE_TEMP(getbits(extra_callback_info2, 0, 16), 0),
+    // Amount
+    STORE_TEMP(getbits(extra_callback_info2, 16, 8), 1),
+    // Time in "days" (~2.5 days per cargo cycle)
+    STORE_TEMP(getbits(extra_callback_info2, 24, 8), 2)
+  ]
+) {
+  return 8192 / 1000;
+}
+
+item (FEAT_CARGOS, simple_ARMOURED, CC_ARMOURED) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_BULK, CC_BULK) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_PIECE_GOODS, CC_PIECE_GOODS) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_LIQUID, CC_LIQUID) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_REFRIGERATED, CC_REFRIGERATED) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_HAZARDOUS, CC_HAZARDOUS) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_COVERED, CC_COVERED) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_OVERSIZED, CC_OVERSIZED) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}

@@ -1,0 +1,7 @@
+##grflangid 0x00
+##plural 0
+# English US language file
+
+# GRF info
+STR_GRF_NAME         : Simple Cargo Profit
+STR_GRF_DESCRIPTION  : Disregards distance and time for all cargo except passengers/mail
