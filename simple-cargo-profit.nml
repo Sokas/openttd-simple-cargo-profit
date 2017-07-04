@@ -7,6 +7,28 @@ grf {
   min_compatible_version: 0;
 }
 
+cargotable {
+  COAL,
+  OIL_,
+  LVST,
+  GOOD,
+  GRAI,
+  WOOD,
+  IORE,
+  STEL,
+  VALU,
+  PAPR,
+  WHEA,
+  FOOD,
+  GOLD,
+  RUBR,
+  FRUT,
+  MAIZ,
+  CORE,
+  WATR,
+  DIAM,
+  BATT
+}
 
 switch (FEAT_CARGOS, SELF, simple_profit_callback,
   [
@@ -21,49 +43,121 @@ switch (FEAT_CARGOS, SELF, simple_profit_callback,
   return 8192 / 1000;
 }
 
-item (FEAT_CARGOS, simple_ARMOURED, CC_ARMOURED) {
+item (FEAT_CARGOS, simple_COAL, 0) {
   graphics {
     profit: simple_profit_callback;
   }
 }
 
-item (FEAT_CARGOS, simple_BULK, CC_BULK) {
+item (FEAT_CARGOS, simple_OIL, 1) {
   graphics {
     profit: simple_profit_callback;
   }
 }
 
-item (FEAT_CARGOS, simple_PIECE_GOODS, CC_PIECE_GOODS) {
+item (FEAT_CARGOS, simple_LVST, 2) {
   graphics {
     profit: simple_profit_callback;
   }
 }
 
-item (FEAT_CARGOS, simple_LIQUID, CC_LIQUID) {
+item (FEAT_CARGOS, simple_GOOD, 3) {
   graphics {
     profit: simple_profit_callback;
   }
 }
 
-item (FEAT_CARGOS, simple_REFRIGERATED, CC_REFRIGERATED) {
+item (FEAT_CARGOS, simple_GRAIN, 4) {
   graphics {
     profit: simple_profit_callback;
   }
 }
 
-item (FEAT_CARGOS, simple_HAZARDOUS, CC_HAZARDOUS) {
+item (FEAT_CARGOS, simple_WOOD, 5) {
   graphics {
     profit: simple_profit_callback;
   }
 }
 
-item (FEAT_CARGOS, simple_COVERED, CC_COVERED) {
+item (FEAT_CARGOS, simple_IRON, 6) {
   graphics {
     profit: simple_profit_callback;
   }
 }
 
-item (FEAT_CARGOS, simple_OVERSIZED, CC_OVERSIZED) {
+item (FEAT_CARGOS, simple_STEEL, 7) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_VALUABLE, 8) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_PAPER, 9) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_WHEAT, 10) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_FOOD, 11) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_GOLD, 12) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_RUBR, 13) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_FRUIT, 14) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_MAIZE, 15) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_COPPER, 16) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_WATER, 17) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_DIAMONDS, 18) {
+  graphics {
+    profit: simple_profit_callback;
+  }
+}
+
+item (FEAT_CARGOS, simple_BATTERIES, 19) {
   graphics {
     profit: simple_profit_callback;
   }
